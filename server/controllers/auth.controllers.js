@@ -1,4 +1,5 @@
 import User from "../models/user.model.js";
+import generateTokenAndSetCookie from '../utils/jwtTokenGenerator.js'
 import bcrypt from 'bcryptjs'
 
 export const signup = async (req, res) => {
@@ -23,14 +24,21 @@ export const signup = async (req, res) => {
            gender,
            profilePicture: profilePic 
         });
-        await newUser.save();
 
-        res.status(201).json({
-            _id: newUser._id,
-            fullName: newUser.fullName,
-            username: newUser.username,
-            profilePicture: newUser.profilePicture
-        });
+        if (newUser) {
+            generateTokenAndSetCookie(newUser._id, res);
+            await newUser.save();
+
+            res.status(201).json({
+                _id: newUser._id,
+                fullName: newUser.fullName,
+                username: newUser.username,
+                profilePicture: newUser.profilePicture
+            });
+        } else {
+            res.status(400).json({error:"Invalid user data"});
+        }
+        
    } catch (error) {
     console.log('Error in signup', error.message);
     //res.send(500).json({error:"Server error while trying to signup"});
