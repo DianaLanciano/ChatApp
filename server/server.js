@@ -1,17 +1,23 @@
 import express from 'express';
 import dotenv from 'dotenv';
+
 import authRoutes from './routs/auth.routes.js';
+import establishMongoConnection from './db/mongoConnectionSetup.js'
 
 const app = express();
-dotenv.config();
 
+dotenv.config();
 const PORT = process.env.PORT;
 
-app.get('/', (req, res) => {
-    res.send("Hello world!");
-});
-
-// middleware
+/**************************************  MIDDLEWARE ************************************* */
+app.use(express.json()); // to parse incoming requests 
 app.use("/api/auth", authRoutes);
 
+
+
+
+
+/**************************************  CREATE SERVER ************************************* */
+establishMongoConnection(); 
 app.listen(PORT, () => console.log(`Server is listening on port ${PORT}`));
+

@@ -8,3 +8,5 @@ const establishMongoConnection = async () => {
         console.log('An error occurred while trying to connect mongoDB', error.message);
     }
 };
+
+export default establishMongoConnection;
