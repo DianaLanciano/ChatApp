@@ -8,20 +8,20 @@ const useGetMessages = () => {
 
   useEffect(() => {
     const getMessages = async () => {
-      setLoading(false);
+      setLoading(true);
       try {
         const res = await fetch(`/api/message/${selectedConversation._id}`);
         const data = await res.json();
         if (data.error) throw new Error(data.error);
         setMessages(data);
       } catch (error) {
-        console.log(error.message);
+        toast.error(error.message);
       } finally {
         setLoading(false);
       }
     };
     if (selectedConversation?._id) getMessages();
-  }, [selectedConversation?._id, setMessages]);
+  }, [selectedConversation, setMessages]);
 
   return { messages, loading };
 };
