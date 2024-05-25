@@ -53,8 +53,14 @@ export const getMessages = async (req, res) => {
       participants: { $all: [senderId, receiverId] },
     }).populate("messages"); // the populate will get the message object and not only the reference - id
 
-    if (!conversation) res.status(200).json([]);
-    res.status(200).json(conversation.messages);
+    let result;
+    if (!conversation) {
+      result = [];
+    } else {
+      result = conversation;
+    }
+    
+    res.status(200).json(result);
     
   } catch (error) {
     console.log("Error in get messages", error.message);
