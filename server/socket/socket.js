@@ -12,12 +12,27 @@ const io = new Server(server, {
     }
 });
 
+export const getReceiverSocketId = receiverId => {
+    return userSocketMap[receiverId];
+}
+
+
+
+let userSocketMap = {}; // {userId : socketId}
 //socket.io is listen to events. It can be used both on server and client
 io.on('connection', socket => {
     console.log('A user connoted', socket.id);
 
+    const userId = socket.handshake.query.userId;
+    if (userId != "undefined") userSocketMap[userId] = socket.id;
+
+    // io.emit() will send event to all connected clients
+    io.emit("getOnlineUsers", Object.keys(userSocketMap));
+
     socket.on("disconnected", () => {
         console.log('A user disconnected', socket.id);
+        delete userSocketMap[userId];
+        io.emit("getOnlineUsers", Object.keys(userSocketMap));
     });
 });
 
