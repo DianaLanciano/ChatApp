@@ -1,18 +1,15 @@
-# A project using MERN stack <img src="https://blog.nextideatech.com/wp-content/uploads/2022/12/1_FVtCyRdJ6KOr4YswTtwMeA-1024x586.jpeg" width="100" height="200">
+# A project using MERN stack
+<img src="https://blog.nextideatech.com/wp-content/uploads/2022/12/1_FVtCyRdJ6KOr4YswTtwMeA-1024x586.jpeg" width="400" height="100">
+
+→ Real time messages using socket.io
+→ Zustand for state manegment
+→ Toast for error handeling
+→ JWT
+→ TailwindCSS + Daisy UI
 
 
-<i class="fa-solid fa-circle-arrow-right"></i> Real time messages using socket.io
-### Zustand for state manegment
-### Toast for error handeling
-### JWT
-### TailwindCSS + Daisy UI
+ ♡ https://chatapp-a4ml.onrender.com ♡
 
-
-# https://chatapp-a4ml.onrender.com
-
-
-
-  
 
 
 ![Screenshot 2024-06-01 at 19 17 45](https://github.com/DianaLanciano/ChatApp/assets/62158562/1ff050a4-bc8a-4eab-b039-c93bff5a733b)
