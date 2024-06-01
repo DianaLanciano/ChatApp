@@ -1,7 +1,7 @@
 # A project using MERN stack
 <img src="https://blog.nextideatech.com/wp-content/uploads/2022/12/1_FVtCyRdJ6KOr4YswTtwMeA-1024x586.jpeg" width="400" height="400">
 
-→ Real time messages using socket.io
+→ Real time messages using socket.io [\n]
 → Zustand for state manegment
 → Toast for error handeling
 → JWT
