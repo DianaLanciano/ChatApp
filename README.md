@@ -1,5 +1,5 @@
 # A project using MERN stack.
-<img src="[https://your-image-url.type](https://blog.nextideatech.com/wp-content/uploads/2022/12/1_FVtCyRdJ6KOr4YswTtwMeA.jpeg)" width="100" height="100">
+<img src="https://blog.nextideatech.com/wp-content/uploads/2022/12/1_FVtCyRdJ6KOr4YswTtwMeA-1024x586.jpeg" width="100" height="100">
 
 
 ### Real time messages using socket.io
