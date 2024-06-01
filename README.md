@@ -11,8 +11,8 @@
 # https://chatapp-a4ml.onrender.com
 
 
+<img src="![Screenshot 2024-06-01 at 19 17 09](https://github.com/DianaLanciano/ChatApp/assets/62158562/3a811142-c5ba-46f1-b5d9-f8dea2c15293)" width="100" height="100">
 
   
-![Screenshot 2024-06-01 at 19 17 09](https://github.com/DianaLanciano/ChatApp/assets/62158562/3a811142-c5ba-46f1-b5d9-f8dea2c15293)
 
 ![Screenshot 2024-06-01 at 19 17 45](https://github.com/DianaLanciano/ChatApp/assets/62158562/ff6119aa-76d2-4768-8252-b52552eafe57)
